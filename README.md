@@ -25,4 +25,6 @@ Python packages:
 numpy 1.24.3
 OpenCV  4.9.0
 tensorflow 2.13.0
-  
+pip install -U flask-cors
+pip install flask
+pip install opencv-python 
