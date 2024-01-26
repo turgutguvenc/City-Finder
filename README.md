@@ -47,7 +47,7 @@ gcloud auth login
 
 ```bash
 cd gcp
-gcloud functions deploy predict_lite --runtime python38 --trigger-http --memory 512 --project project_id
+gcloud functions deploy predict --runtime python38 --trigger-http --memory 1024 --docker-registry=artifact-registry --project eastern-cosmos-412414
 ```
 
 8. Your model is now deployed.
