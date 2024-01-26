@@ -28,3 +28,19 @@ tensorflow 2.13.0
 pip install -U flask-cors
 pip install flask
 pip install opencv-python 
+
+
+Deploying the TF Lite on GCP
+Create a GCP account.
+Create a Project on GCP (Keep note of the project id).
+Create a GCP bucket.
+Upload the potatoes.h5 model in the bucket in the path models/potatos.h5.
+Install Google Cloud SDK (Setup instructions).
+Authenticate with Google Cloud SDK.
+gcloud auth login
+Run the deployment script.
+cd gcp
+gcloud functions deploy predict_lite --runtime python38 --trigger-http --memory 512 --project project_id
+Your model is now deployed.
+Use Postman to test the GCF using the Trigger URL.
+Inspiration: https://cloud.google.com/blog/products/ai-machine-learning/how-to-serve-deep-learning-models-using-tensorflow-2-0-with-cloud-functions
